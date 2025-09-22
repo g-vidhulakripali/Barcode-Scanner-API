@@ -11,6 +11,9 @@ from google.genai.types import (
     HttpOptions,
 )
 
+from fastapi import FastAPI
+app = FastAPI(strict_slashes=False)
+
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 if not API_KEY:
